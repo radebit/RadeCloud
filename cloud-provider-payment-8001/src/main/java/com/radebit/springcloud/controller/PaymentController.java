@@ -4,9 +4,13 @@ import com.radebit.springcloud.entities.CommonResult;
 import com.radebit.springcloud.entities.Payment;
 import com.radebit.springcloud.service.PaymentService;
 import lombok.extern.slf4j.Slf4j;
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
+import org.springframework.cloud.client.ServiceInstance;
+import org.springframework.cloud.client.discovery.DiscoveryClient;
 import org.springframework.web.bind.annotation.*;
+
+import javax.annotation.Resource;
+import java.util.List;
 
 /**
  * @author Rade
@@ -18,8 +22,11 @@ import org.springframework.web.bind.annotation.*;
 @Slf4j
 @RequestMapping("/payment")
 public class PaymentController {
-    @Autowired
+    @Resource
     private PaymentService paymentService;
+
+    @Resource
+    private DiscoveryClient discoveryClient;    // 对于注册进入Eureka的微服务，可以通过服务发现来获得改服务的信息
 
     @Value("${server.port}")
     private String serverPort;
@@ -44,5 +51,21 @@ public class PaymentController {
         } else {
             return new CommonResult(-1, "插入失败！port:" + serverPort);
         }
+    }
+
+    @GetMapping("/discovery")
+    public Object discovery() {
+        List<String> services = discoveryClient.getServices();
+        for (String service : services) {
+            log.info("====element===>" + service);
+        }
+        List<ServiceInstance> instances = discoveryClient.getInstances("CLOUD-PAYMENT-SERVICE");
+        for (ServiceInstance instance : instances) {
+            log.info("====instance===>" + instance.getServiceId() + "\t"
+                    + instance.getHost() + "\t"
+                    + instance.getPort() + "\t"
+                    + instance.getUri());
+        }
+        return this.discoveryClient;
     }
 }
