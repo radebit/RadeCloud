@@ -34,4 +34,10 @@ public class OrderFeignController {
     public CommonResult<Payment> find(@PathVariable("id") Long id) {
         return paymentFeignService.selectPaymentById(id);
     }
+
+    @GetMapping("/consumer/payment/timeout")
+    public CommonResult<String> timeout() {
+        System.out.println("--=--==-===--");
+        return paymentFeignService.timeout();
+    }
 }
