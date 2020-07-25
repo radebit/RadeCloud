@@ -32,7 +32,7 @@ public class PaymentController {
     private String serverPort;
 
     @GetMapping("/{id}")
-    public CommonResult get(@PathVariable("id") Long id) {
+    public CommonResult<Integer> get(@PathVariable("id") Long id) {
         Payment payment = paymentService.selectByPrimaryKey(id);
         if (payment != null) {
             return new CommonResult(200, "获取成功！port:" + serverPort, payment);
@@ -42,7 +42,7 @@ public class PaymentController {
     }
 
     @PostMapping()
-    public CommonResult create(@RequestBody Payment payment) {
+    public CommonResult<Payment> create(@RequestBody Payment payment) {
         int result = paymentService.insert(payment);
         log.info("===插入结果：" + result + "===");
 
