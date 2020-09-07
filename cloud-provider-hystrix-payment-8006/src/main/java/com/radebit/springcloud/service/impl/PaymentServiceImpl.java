@@ -1,5 +1,6 @@
 package com.radebit.springcloud.service.impl;
 
+import com.netflix.hystrix.contrib.javanica.annotation.HystrixCommand;
 import com.radebit.springcloud.service.PaymentService;
 import org.springframework.stereotype.Service;
 
@@ -15,7 +16,7 @@ public class PaymentServiceImpl implements PaymentService {
      * @return
      */
     @Override
-    public String paymentInfo_ok(Integer id) {
+    public String paymentInfoOk(Integer id) {
         return "线程池：" + Thread.currentThread().getName() + " paymentInfo_ok,id：" + id + "\t SUCCESS";
     }
 
@@ -26,7 +27,8 @@ public class PaymentServiceImpl implements PaymentService {
      * @return
      */
     @Override
-    public String paymentInfo_timeout(Integer id) {
+    @HystrixCommand(fallbackMethod = "paymentInfoTimeoutHandler")   // 出问题后兜底的方法
+    public String paymentInfoTimeout(Integer id) {
         int timeNum = 3;
         try {
             TimeUnit.SECONDS.sleep(timeNum);

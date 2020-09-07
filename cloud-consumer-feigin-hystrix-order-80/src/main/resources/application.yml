@@ -6,3 +6,8 @@ eureka:
     register-with-eureka: false
     service-url:
       defaultZone: http://eureka7001.com:7001/eureka
+
+# 设置Feign客户端建立连接所用的时间，适用于网络状况正常的情况下，两端连接所用的时间
+ribbon:
+  ReadTimeout: 5000 # 建立连接所用的时间，适应于网络状况正常的情况下，两端连接所用的时间
+  ConnectTimeout: 5000  # 建立连接后从服务器读取到可用资源所用的时间
