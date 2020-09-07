@@ -35,7 +35,7 @@ public class OrderHystrixController {
             @HystrixProperty(name = "execution.isolation.thread.timeoutInMilliseconds", value = "2000")
     })   // 出问题后兜底的方法
     public String paymentInfoTimeout(@PathVariable("id") Integer id) {
-        int errorTest = 10 / 0; // 报错测试
+//        int errorTest = 10 / 0; // 报错测试
         return paymentFeignService.paymentInfoTimeout(id);
     }
 
