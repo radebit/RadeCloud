@@ -33,7 +33,7 @@ public class PaymentServiceImpl implements PaymentService {
     })   // 出问题后兜底的方法
     public String paymentInfoTimeout(Integer id) {
         int timeNum = 3;
-//        int errorTest = 10 / 0;
+//        int errorTest = 10 / 0; // 报错测试
         try {
             TimeUnit.SECONDS.sleep(timeNum);
         } catch (InterruptedException e) {
@@ -49,6 +49,7 @@ public class PaymentServiceImpl implements PaymentService {
      * @return
      */
     public String paymentInfoTimeoutHandler(Integer id) {
+        // 当前服务不可用了，做服务降级，兜底方案都是paymentInfoTimeoutHandler
         return "线程池：" + Thread.currentThread().getName() + " paymentInfoTimeoutHandler,id：" + id + "\t 系统繁忙，请稍后再试！";
     }
 }
