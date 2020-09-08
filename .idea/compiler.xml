@@ -15,6 +15,7 @@
         <module name="cloud-api-commons" />
         <module name="cloud-consumerzk-order-80" />
         <module name="cloud-consumer-order-80" />
+        <module name="cloud-consumer-hystrix-dashboard-9001" />
         <module name="cloud-eureka-server-7002" />
         <module name="cloud-provider-hystrix-payment-8006" />
         <module name="cloud-consumerconsul-order-80" />
