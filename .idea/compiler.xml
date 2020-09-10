@@ -20,6 +20,7 @@
         <module name="cloud-provider-hystrix-payment-8006" />
         <module name="cloud-consumerconsul-order-80" />
         <module name="cloud-consumer-feigin-hystrix-order-80" />
+        <module name="cloud-gateway-9527" />
         <module name="cloud-consumer-feign-order-80" />
         <module name="cloud-provider-payment-8005" />
         <module name="cloud-provider-payment-8004" />
