@@ -12,7 +12,7 @@ spring:
           search-paths:
             - rade-cloud-config
           username: radebit
-          password: jys251683
+          password: radebit
         default-label: master
 
 eureka:
