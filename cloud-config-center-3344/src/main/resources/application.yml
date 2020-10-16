@@ -13,7 +13,7 @@ spring:
             - rade-cloud-config
           username: radebit
           password: radebit
-        default-label: master
+      label: master
 
 eureka:
   client:
