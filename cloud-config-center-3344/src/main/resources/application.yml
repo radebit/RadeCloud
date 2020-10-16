@@ -11,8 +11,6 @@ spring:
           uri: https://gitee.com/radebit/rade-cloud-config.git
           search-paths:
             - rade-cloud-config
-          username: radebit
-          password: radebit
       label: master
 
 eureka:
