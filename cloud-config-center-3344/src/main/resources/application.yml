@@ -1,18 +1,13 @@
 server:
   port: 3344
-
 spring:
   application:
-    name: cloud-config-center
+    name:  cloud-config-center # 注册进Eureka服务器的微服务名
   cloud:
     config:
       server:
         git:
-          uri: https://gitee.com/radebit/rade-cloud-config.git
-          search-paths:
-            - rade-cloud-config
-      label: master
-
+          uri: https://gitee.com/radebit/rade-cloud-config
 eureka:
   client:
     service-url:
