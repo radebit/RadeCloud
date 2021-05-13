@@ -26,6 +26,7 @@
         <module name="cloud-consumer-hystrix-dashboard-9001" />
         <module name="cloud-provider-payment-8005" />
         <module name="cloud-config-client-3366" />
+        <module name="cloud-config-client-3355" />
       </profile>
     </annotationProcessing>
   </component>
