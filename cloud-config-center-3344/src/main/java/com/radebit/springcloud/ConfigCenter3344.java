@@ -5,15 +5,14 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.cloud.config.server.EnableConfigServer;
 
 /**
- * @author Rade
- * @date 2020/10/16 9:03 下午
- * @url https://blog.radebit.com
- * 说明：
+ * @Author Rade
+ * @Date 2021/5/13 12:44:44
+ * @Description
  */
 @SpringBootApplication
 @EnableConfigServer
-public class ConfigCenterMain3344 {
+public class ConfigCenter3344 {
     public static void main(String[] args) {
-        SpringApplication.run(ConfigCenterMain3344.class, args);
+        SpringApplication.run(ConfigCenter3344.class, args);
     }
 }
