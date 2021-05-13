@@ -11,7 +11,7 @@ import org.springframework.web.bind.annotation.RestController;
  * @Description
  */
 @RestController
-@RefreshScope
+@RefreshScope   // 刷新
 public class TestConfigController {
     @Value("${server.port}")
     private String serverPort;
