@@ -1,0 +1,5 @@
+/Users/rade/Documents/Java/SpringCloud/RadeCloud/cloud-consumer-feigin-hystrix-order-80/src/main/java/com/radebit/springcloud/config/FeignConfig.java
+/Users/rade/Documents/Java/SpringCloud/RadeCloud/cloud-consumer-feigin-hystrix-order-80/src/main/java/com/radebit/springcloud/controller/OrderHystrixController.java
+/Users/rade/Documents/Java/SpringCloud/RadeCloud/cloud-consumer-feigin-hystrix-order-80/src/main/java/com/radebit/springcloud/service/PaymentFeignService.java
+/Users/rade/Documents/Java/SpringCloud/RadeCloud/cloud-consumer-feigin-hystrix-order-80/src/main/java/com/radebit/springcloud/service/fallback/PaymentFallbackService.java
+/Users/rade/Documents/Java/SpringCloud/RadeCloud/cloud-consumer-feigin-hystrix-order-80/src/main/java/com/radebit/springcloud/OrderHystrixMain80.java

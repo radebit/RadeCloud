@@ -1,0 +1,4 @@
+/Users/rade/Documents/Java/SpringCloud/RadeCloud/cloud-consumer-feign-order-80/src/main/java/com/radebit/springcloud/config/FeignConfig.java
+/Users/rade/Documents/Java/SpringCloud/RadeCloud/cloud-consumer-feign-order-80/src/main/java/com/radebit/springcloud/controller/OrderFeignController.java
+/Users/rade/Documents/Java/SpringCloud/RadeCloud/cloud-consumer-feign-order-80/src/main/java/com/radebit/springcloud/OrderFeignMain80.java
+/Users/rade/Documents/Java/SpringCloud/RadeCloud/cloud-consumer-feign-order-80/src/main/java/com/radebit/springcloud/service/PaymentFeignService.java
