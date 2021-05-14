@@ -1,5 +1,0 @@
-com/radebit/springcloud/service/PaymentFeignService.class
-com/radebit/springcloud/config/FeignConfig.class
-com/radebit/springcloud/OrderHystrixMain80.class
-com/radebit/springcloud/service/fallback/PaymentFallbackService.class
-com/radebit/springcloud/controller/OrderHystrixController.class
