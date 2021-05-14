@@ -24,6 +24,7 @@
         <module name="cloud-config-client-3366" />
         <module name="cloud-consumer-feigin-hystrix-order-80" />
         <module name="cloud-eureka-server-7001" />
+        <module name="cloud-alibaba-consumer-order-83" />
         <module name="cloud-eureka-server-7002" />
         <module name="cloud-api-commons" />
         <module name="cloud-provider-hystrix-payment-8006" />
