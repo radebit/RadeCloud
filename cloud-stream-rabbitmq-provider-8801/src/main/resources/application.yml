@@ -3,7 +3,7 @@ server:
 
 spring:
   application:
-    name: cloud-stream-provider
+    name: cloud-stream-provider-8801
   cloud:
     stream:
       # 配置要绑定的RabbitMQ的服务信息

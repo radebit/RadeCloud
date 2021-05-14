@@ -1,9 +1,9 @@
 server:
-  port: 8802
+  port: 8803
 
 spring:
   application:
-    name: cloud-stream-consumer-8802
+    name: cloud-stream-consumer-8803
   cloud:
     stream:
       # 配置要绑定的RabbitMQ的服务信息
@@ -41,6 +41,6 @@ eureka:
     # 租约到期时间（默认是90秒）
     lease-expiration-duration-in-seconds: 5
     # 在信息列表显示的主机名称
-    instance-id: receive-8802.com
+    instance-id: receive-8803.com
     # 访问的路径变为IP地址
     prefer-ip-address: true
