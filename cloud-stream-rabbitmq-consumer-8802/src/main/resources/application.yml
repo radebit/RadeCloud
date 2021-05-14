@@ -30,6 +30,8 @@ spring:
           content-type: application/json
           # 设置要绑定的消息服务的具体设置
           binder: defaultRabbit
+          # 分组
+          group: radebitA
 
 eureka:
   client:
