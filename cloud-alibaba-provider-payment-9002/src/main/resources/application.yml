@@ -6,7 +6,9 @@ spring:
   cloud:
     nacos:
       discovery:
-        server-addr: localhost:8848
+#        server-addr: localhost:8848
+        # 切换至Nacos集群地址，这边使用了Nginx做转发，建议修改默认80端口
+        server-addr: 172.16.221.13:80
 # 暴露监控端点
 management:
   endpoints:
