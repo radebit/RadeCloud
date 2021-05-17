@@ -33,6 +33,7 @@
         <module name="cloud-stream-rabbitmq-consumer-8803" />
         <module name="cloud-consumerzk-order-80" />
         <module name="cloud-alibaba-config-client-3377" />
+        <module name="cloud-alibaba-sentinel-service-8401" />
         <module name="cloud-config-client-3355" />
       </profile>
     </annotationProcessing>
