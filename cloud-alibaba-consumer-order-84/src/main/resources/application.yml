@@ -2,7 +2,7 @@ server:
   port: 84
 spring:
   application:
-    name: nacos-consumer-order
+    name: nacos-order-consumer
   cloud:
     nacos:
       discovery:
@@ -16,3 +16,7 @@ spring:
 # 消费端将要去访问的微服务名称
 service-url:
   nacos-user-service: http://nacos-payment-provider
+# 激活Sentinel对Feign的支持
+feign:
+  sentinel:
+    enabled: true

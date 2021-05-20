@@ -4,6 +4,7 @@ import com.alibaba.csp.sentinel.annotation.SentinelResource;
 import com.alibaba.csp.sentinel.slots.block.BlockException;
 import com.radebit.springcloud.entities.CommonResult;
 import com.radebit.springcloud.entities.Payment;
+import com.radebit.springcloud.service.PaymentService;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
@@ -25,6 +26,9 @@ public class CircleBreakerController {
 
     @Resource
     private RestTemplate restTemplate;
+
+    @Resource
+    private PaymentService paymentService;
 
     @GetMapping("/consumer/fallback/{id}")
 //    @SentinelResource(value = "fallback")   // 没有任何配置的情况
@@ -56,5 +60,12 @@ public class CircleBreakerController {
     public CommonResult<Payment> blockHandler(@PathVariable("id") Long id, BlockException blockException) {
         Payment payment = new Payment(id, "null");
         return new CommonResult<>(500, "blockHandler-Sentinel限流，blockException：" + blockException.getMessage(), payment);
+    }
+
+    // ======= OpenFeign =======
+
+    @GetMapping("/consumer/payment/{id}")
+    public CommonResult<Payment> getPayment(@PathVariable("id") Long id) {
+        return paymentService.getPayment(id);
     }
 }
