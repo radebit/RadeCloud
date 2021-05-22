@@ -38,6 +38,7 @@
         <module name="cloud-alibaba-config-client-3377" />
         <module name="cloud-alibaba-sentinel-service-8401" />
         <module name="cloud-config-client-3355" />
+        <module name="seata-order-service-2001" />
       </profile>
     </annotationProcessing>
   </component>
