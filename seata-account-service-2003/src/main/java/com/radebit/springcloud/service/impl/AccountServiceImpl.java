@@ -1,10 +1,15 @@
 package com.radebit.springcloud.service.impl;
 
 import com.radebit.springcloud.service.AccountService;
+import lombok.extern.slf4j.Slf4j;
 import org.springframework.stereotype.Service;
+
 import javax.annotation.Resource;
+
 import com.radebit.springcloud.domain.Account;
 import com.radebit.springcloud.mapper.AccountMapper;
+
+import java.math.BigDecimal;
 
 /**
  * @Author Rade
@@ -12,6 +17,7 @@ import com.radebit.springcloud.mapper.AccountMapper;
  * @Description
  */
 @Service
+@Slf4j
 public class AccountServiceImpl implements AccountService {
 
     @Resource
@@ -47,5 +53,21 @@ public class AccountServiceImpl implements AccountService {
         return accountMapper.updateByPrimaryKey(record);
     }
 
+    /**
+     * 扣减余额
+     */
+    @Override
+    public int decrease(Long userId, BigDecimal money) {
+        log.info("===== account-service 扣减余额开始 =====");
+        Account account = selectByPrimaryKey(userId);
+        if (account == null) {
+            throw new RuntimeException("用户不存在！");
+        }
+        account.setUsedMoney(account.getUsedMoney().add(money));
+        account.setResidueMoney(account.getTotalMoney().subtract(account.getUsedMoney()));
+        int res = updateByPrimaryKeySelective(account);
+        log.info("===== account-service 扣减余额结束 =====");
+        return res;
+    }
 }
 
