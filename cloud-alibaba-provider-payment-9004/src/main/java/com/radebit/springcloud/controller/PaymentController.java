@@ -1,4 +1,4 @@
-package springcloud.controller;
+package com.radebit.springcloud.controller;
 
 import com.radebit.springcloud.entities.CommonResult;
 import com.radebit.springcloud.entities.Payment;

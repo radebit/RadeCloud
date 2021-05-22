@@ -21,6 +21,7 @@
         <module name="cloud-provider-payment-8001" />
         <module name="cloud-provider-payment-8004" />
         <module name="cloud-consumerconsul-order-80" />
+        <module name="seata-storage-service-2002" />
         <module name="cloud-consumer-hystrix-dashboard-9001" />
         <module name="cloud-provider-payment-8005" />
         <module name="cloud-config-client-3366" />
