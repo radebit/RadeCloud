@@ -1,5 +1,6 @@
 package com.radebit.springcloud.service.impl;
 
+import lombok.extern.slf4j.Slf4j;
 import org.springframework.stereotype.Service;
 
 import javax.annotation.Resource;
@@ -14,6 +15,7 @@ import com.radebit.springcloud.service.StorageService;
  * @Description
  */
 @Service
+@Slf4j
 public class StorageServiceImpl implements StorageService {
 
     @Resource
@@ -59,13 +61,16 @@ public class StorageServiceImpl implements StorageService {
      */
     @Override
     public int decrease(Long productId, Integer count) {
+        log.info("===== storage-service 扣减库存开始 =====");
         Storage storage = selectByProductId(productId);
         if (storage == null) {
             throw new RuntimeException("商品不存在！");
         }
         storage.setUsedNum(storage.getUsedNum() + count);
         storage.setRedidueNum(storage.getTotalNum() - storage.getUsedNum());
-        return updateByPrimaryKeySelective(storage);
+        int res = updateByPrimaryKeySelective(storage);
+        log.info("===== storage-service 扣减库存结束 =====");
+        return res;
     }
 
 }
