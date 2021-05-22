@@ -67,6 +67,7 @@ public class OrderServiceImpl implements OrderService {
     @Override
     public int createOrder(Order order) {
         log.info("===== 开始创建新的订单 =====");
+        log.info("===== OrderInfo:" + order);
         insert(order);
 
         log.info("===== 订单微服务开始调用库存服务，进行扣减库存 =====");
