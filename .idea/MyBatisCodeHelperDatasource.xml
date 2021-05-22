@@ -6,10 +6,10 @@
         <option name="generateService" value="true" />
         <option name="generateServiceInterface" value="true" />
         <option name="javaMapperPackage" value="com.radebit.springcloud.mapper" />
-        <option name="javaMapperPath" value="$PROJECT_DIR$/seata-storage-service-2002/src/main/java" />
+        <option name="javaMapperPath" value="$PROJECT_DIR$/seata-account-service-2003/src/main/java" />
         <option name="javaModelPackage" value="com.radebit.springcloud.domain" />
-        <option name="javaModelPath" value="$PROJECT_DIR$/seata-storage-service-2002/src/main/java" />
-        <option name="lastDatabaseCrudChooseModuleName" value="seata-storage-service-2002" />
+        <option name="javaModelPath" value="$PROJECT_DIR$/seata-account-service-2003/src/main/java" />
+        <option name="lastDatabaseCrudChooseModuleName" value="seata-account-service-2003" />
         <option name="lombokAllArgConstructor" value="true" />
         <option name="lombokDataAnnotation" value="true" />
         <option name="lombokNoArgsConstructor" value="true" />
@@ -28,6 +28,22 @@
                   <option name="javaServicePath" value="$PROJECT_DIR$/cloud-provider-payment-8001/src/main/java" />
                   <option name="xmlPackage" value="mapper" />
                   <option name="xmlPath" value="$PROJECT_DIR$/cloud-provider-payment-8001/src/main/resources" />
+                </UserPackageAndPathInfoByModule>
+              </value>
+            </entry>
+            <entry key="seata-account-service-2003">
+              <value>
+                <UserPackageAndPathInfoByModule>
+                  <option name="javaMapperPackage" value="com.radebit.springcloud.mapper" />
+                  <option name="javaMapperPath" value="$PROJECT_DIR$/seata-account-service-2003/src/main/java" />
+                  <option name="javaModelPacakge" value="com.radebit.springcloud.domain" />
+                  <option name="javaModelPath" value="$PROJECT_DIR$/seata-account-service-2003/src/main/java" />
+                  <option name="javaServiceInterfacePackage" value="com.radebit.springcloud.service" />
+                  <option name="javaServiceInterfacePath" value="$PROJECT_DIR$/seata-account-service-2003/src/main/java" />
+                  <option name="javaServicePackage" value="com.radebit.springcloud.service.impl" />
+                  <option name="javaServicePath" value="$PROJECT_DIR$/seata-account-service-2003/src/main/java" />
+                  <option name="xmlPackage" value="mapper" />
+                  <option name="xmlPath" value="$PROJECT_DIR$/seata-account-service-2003/src/main/resources" />
                 </UserPackageAndPathInfoByModule>
               </value>
             </entry>
@@ -79,6 +95,18 @@
                 </TableGenerateConfig>
               </value>
             </entry>
+            <entry key="seata_account:t_account">
+              <value>
+                <TableGenerateConfig>
+                  <option name="generatedKey" value="user_id" />
+                  <option name="javaModelName" value="Account" />
+                  <option name="moduleName" value="seata-account-service-2003" />
+                  <option name="sequenceColumn" value="" />
+                  <option name="sequenceId" value="" />
+                  <option name="useActualColumnName" value="false" />
+                </TableGenerateConfig>
+              </value>
+            </entry>
             <entry key="seata_order:t_order">
               <value>
                 <TableGenerateConfig>
@@ -106,7 +134,7 @@
           </map>
         </option>
         <option name="xmlMapperPackage" value="mapper" />
-        <option name="xmlMapperPath" value="$PROJECT_DIR$/seata-storage-service-2002/src/main/resources" />
+        <option name="xmlMapperPath" value="$PROJECT_DIR$/seata-account-service-2003/src/main/resources" />
       </ProjectProfile>
     </option>
   </component>
