@@ -3,6 +3,7 @@ package com.radebit.springcloud.service.impl;
 import com.radebit.springcloud.constant.OrderStatusConstants;
 import com.radebit.springcloud.service.AccountService;
 import com.radebit.springcloud.service.StorageService;
+import io.seata.spring.annotation.GlobalTransactional;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.stereotype.Service;
 
@@ -64,6 +65,7 @@ public class OrderServiceImpl implements OrderService {
     /**
      * 创建订单业务
      */
+    @GlobalTransactional(name = "create-order", rollbackFor = Exception.class)
     @Override
     public int createOrder(Order order) {
         log.info("===== 开始创建新的订单 =====");
